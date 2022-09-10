@@ -8,4 +8,14 @@ function getPokemon (id) {
     .then(data => console.log(data))
 }
 
-getPokemon(1)
+// console.log(getPokemon(1))
+
+function getMultiplePokemon (items) {
+  for (let i = 1; i <= items; i++) {
+    getPokemon(i)
+  }
+}
+
+// getMultiplePokemon(6)
+
+function generatePokemon (pokemon) {}
