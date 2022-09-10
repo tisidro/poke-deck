@@ -1,0 +1,14 @@
+body {
+  background: rgb(245, 141, 193);
+  font-family: 'Paytone One', sans-serif;
+  color: rgb(76, 8, 184);
+}
+
+.main-wrapper {
+  display: grid;
+  background: rgb(157, 247, 122);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 85%;
+  margin: auto 4rem;
+}
