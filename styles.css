@@ -1,14 +1,60 @@
 body {
-  background: rgb(245, 141, 193);
+  background: linear-gradient(90deg, red 50%, white 50%);
   font-family: 'Paytone One', sans-serif;
-  color: rgb(76, 8, 184);
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4.2rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h2 {
+  color: rgb(74, 74, 183);
 }
 
 .main-wrapper {
   display: grid;
-  background: rgb(157, 247, 122);
-  border-radius: 1rem;
-  padding: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background: rgb(245, 203, 66);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 4rem;
   width: 85%;
-  margin: auto 4rem;
+  margin-left: 2rem;
+  padding: 2.5rem;
+  box-shadow: 0.5rem 1rem 0.5rem rgb(16, 41, 7);
+}
+
+.pokemon-card {
+  font-family: 'Paytone One', sans-serif;
+  border-radius: 2rem;
+  background-color: rgb(23, 21, 21);
+  color: white;
+  width: 15rem;
+  box-shadow: 0.2rem 0.5rem 0.2rem rgb(20, 64, 7);
+}
+
+.pokemon-card p {
+  margin: 1.5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.sprite-wrapper {
+  background-image: url('/gold-dot.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
