@@ -39,9 +39,9 @@ function generatePokemon (pokemon) {
   name.classList.add('name')
   name.textContent = pokemon.name
 
+  card.appendChild(name)
   card.appendChild(spriteWrapper)
   card.appendChild(number)
-  card.appendChild(name)
 
   mainWrapper.appendChild(card)
 }
