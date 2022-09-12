@@ -1,5 +1,7 @@
 //outer wrapper for pokemon cards
 const mainWrapper = document.querySelector('.main-wrapper')
+//while card loads
+const cardLoading = document.querySelector('#card-loading')
 
 //function retrieves pokemon data from api
 function fetchPokemon (id) {
@@ -7,19 +9,22 @@ function fetchPokemon (id) {
     .then(res => res.json())
     .then(data => {
       generatePokemon(data)
+      cardLoading.style.display = 'none' //once fetch is called don't display "loading"
     })
 }
 
 // console.log(getPokemon(1))
 
+//fetches number of pokemon specified
 function fetchPokemons (number) {
+  cardLoading.style.display = 'block'
   for (let i = 1; i <= number; i++) {
     fetchPokemon(i)
   }
 }
+// fetchPokemons(6)
 
-// getMultiplePokemon(6)
-
+//creates the pokemon card  by generating child items (elements and classes)
 function generatePokemon (pokemon) {
   const card = document.createElement('div')
   card.classList.add('pokemon-card')
@@ -39,10 +44,12 @@ function generatePokemon (pokemon) {
   name.classList.add('name')
   name.textContent = pokemon.name
 
+  //append child items created above to card for display
   card.appendChild(name)
   card.appendChild(spriteWrapper)
   card.appendChild(number)
 
   mainWrapper.appendChild(card)
 }
+//call fetch for 12 pokemon
 fetchPokemons(12)
